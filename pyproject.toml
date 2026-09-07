@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "s_babes"
+version = "0.1.0"
+description = "A tiny example package"
+requires-python = ">=3.8"
+dependencies = ["redis>=5.0"]
+
+[project.scripts]
+s_babes = "s_babes.cli:main"
+s_babes-worker = "s_babes.worker:run_worker"
+
+[tool.setuptools]
+packages = ["s_babes"]
